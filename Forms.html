@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register With Us</title>
+</head>
+<body>
+
+<h1>Register With Us!</h1>
+
+<!--Action attribute is Where we are sending the form-->
+<!--What kind of request are you sending-->
+<!--GET is a download request .. asking a question-->
+<!--POST is an upload request.. telling the server-->
+<form action="https://requestb.in/1e7qy661" method="POST">
+
+    <label for="email">Email</label>
+    <input id="email" name="email" type="email" placeholder="Enter your Email">
+    <br>
+
+    <label for="password">Password</label>
+    <input id="password" name="password" type="password" placeholder="Enter your password">
+    <br>
+
+    <input id="stay-logged-in" type="checkbox" name="stay-logged-in" checked>
+    <label for="stay-logged-in">Keep me logged in for two weeks</label>
+    <br>
+
+    <h3>Bio</h3>
+    <textarea name="comment"></textarea>
+
+    <br>
+
+
+    <h3>How did you hear about us?</h3>
+    <label for="Billboard"><input id="Billboard" type="checkbox" name="advertisement" value="billboard">Billboard</label> <br>
+
+    <label for="Radio"><input id="Radio" type="checkbox" name="advertisement" value="radio adertisement">Radio Advertisement
+    </label><br>
+
+    <label for="Internet"><input id="Internet" type="checkbox" name="advertisement" value="internet advertisement">Internet Advertisement</label><br>
+
+    <label for="other"><input id="other" type="checkbox" name="advertisement" value="other">Other</label>
+    <br>
+
+    <h3>What Browser are you using?</h3>
+    <select name="web browser">
+        <option value="Chrome">Chrome</option>
+        <option value="Firefox">Firefox</option>
+        <option value="Internet Explorer">Internet Explorer</option>
+    </select>
+    <br><br>
+    <button type="submit">Login</button>
+
+</form>
+
+</body>
+</html>
