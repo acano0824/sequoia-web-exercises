@@ -3,30 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <title>Welcome to Veridian Dynamics!</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abel">
+    <!--<link rel="stylesheet" href="css/style.css">-->
+    <style>
+
+        /*Multiple Selector*/
+        h1, h2 {
+            text-decoration: underline;
+            color: maroon;
+
+
+        }
+        /*Element Selector*/
+        body {
+            font-family: 'Abel', sans-serif;
+            background-image: url("img/black-border-clipart.jpeg");
+            background-size: 300px;
+
+        }
+
+        /* Id Selector */
+        #core_values {
+            color: peachpuff;
+        }
+
+        .purple {
+            color: rebeccapurple;
+        }
+
+        .first_item {
+            font-weight: bold;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+
+        /* unvisited link (:link) */
+        a:link {
+            color: red;
+        }
+
+        /* visited link (:visited) */
+        a:visited {
+            color: black;
+        }
+
+        /* mouse hover over link (:hover) */
+        a:hover {
+            color: blue;
+        }
+
+        /* active/selected link (:active) */
+        a:active {
+            color: green;
+        }
+
+        ul {
+            list-style: circle;
+        }
+
+         th, td {
+            padding: 2px;
+        }
+
+         th {
+            font-weight: bold;
+            text-decoration: underline;
+        }
+    </style>
+
+
 </head>
 <body>
 
 <a id="top"></a>
-    <h1>Welcome to Veridian Dynamics!</h1>
+    <h1 class="fancy-header">Welcome to Veridian Dynamics!</h1>
     <p>At Veridian Dynamics, <strong>we</strong> solve <em>your</em> problems with <strong><em>technology</em></strong>.</p>
 <hr>
-    <h2>Core Values</h2>
+    <h2 id="core_values">Core Values</h2>
     <ul>
-        <li>Competence</li>
-        <li>Involvment</li>
-        <li>Technology</li>
+        <li class="purple first_item">Competence</li>
+        <li class="purple">Involvment</li>
+        <li class="purple">Technology</li>
     </ul>
     <h2>Our Process</h2>
     <ol>
-        <li>Plan</li>
-        <li>Evaluate</li>
-        <li>Implement</li>
+        <li class="purple first_item">Plan</li>
+        <li class="purple">Evaluate</li>
+        <li class="purple">Implement</li>
     </ol>
     <h2>2020 Vision</h2>
     <ul>
-        <li>Become #1 in Technology</li>
-        <li>Increase Success by 20%</li>
-        <li>Increase Business by 30%</li>
+        <li class="purple first_item">Become #1 in Technology</li>
+        <li class="purple">Increase Success by 20%</li>
+        <li class="purple">Increase Business by 30%</li>
     </ul>
 <hr>
     <h2>Company Vision</h2>
