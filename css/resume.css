@@ -1,0 +1,23 @@
+body {
+    background-color: #F1C8DB;
+    color: #AF8295;
+    font-family: Abel;
+
+}
+
+
+h1{
+    text-align: center;
+    text-decoration: underline;
+    color: #704C5E;
+
+}
+
+h2, h3, ul{
+    margin-left: 20px;
+}
+
+ul {
+    list-style: circle;
+
+}
