@@ -1,0 +1,17 @@
+body {
+    background-color: #E8FCCF;
+    color: #3DA35D;
+    font-family: Abel;
+
+}
+
+
+h1{
+    text-align: center;
+    text-decoration: underline;
+
+}
+
+h2, h3, ul{
+    margin-left: 20px;
+}
