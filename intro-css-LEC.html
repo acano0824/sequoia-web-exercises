@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Intro to CSS Lecture</title>
+    <!--Always link your stylesheet after any other style links last and before style tags!-->
+    <link rel="stylesheet" href="css/style.css">
+
+<!--
+
+    Order of priority
+
+    1) !important (AVOID THIS)
+    2) Inline styling
+    3) Embedded Styling
+    4) External Styling Sheet
+    5) id targeted
+    6) class targeted
+    7) element targeted
+    8) between two identical selector/property definitions, the last one defined -->
+
+
+    <!-- embedded styling -->
+    <style>
+
+        /*body {*/
+
+        /*}*/
+
+        /*h1 {*/
+            /*color: blue;*/
+        /*}*/
+
+        /*!*Preferred over ids*!*/
+
+        /*.specialHeaderStyle{*/
+            /*color:purple;*/
+        /*}*/
+
+        /*#specialId {*/
+            /*color: green;*/
+        /*}*/
+
+        /*HEX COLORS*/
+
+        /* #RGB #RRGGBB */
+
+        body {
+            background-color: #808080;
+            font-family: helvetica, arial, sans-serif
+        }
+
+
+    </style>
+
+
+</head>
+<body>
+
+
+    <h1>What color will I be?</h1>
+    <p>Lorem ipsum dolor sit amet</p>
+
+</body>
+</html>
