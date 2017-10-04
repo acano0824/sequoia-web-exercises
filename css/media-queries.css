@@ -2,7 +2,7 @@ html,
 body {
     margin: 0%;
     height: 100%;
-    width: 100%;
+    /*width: 100%;*/
     font-family: sans-serif;
     padding: 1px;
 }
@@ -40,7 +40,7 @@ h1 {
 @media screen and (min-width: 768px) {
     body {
         padding: 5px;
-        width: 99%;
+        /*width: 99%;*/
     }
 
     .alert-info {
@@ -62,11 +62,11 @@ h1 {
     }
     .main {
         float: left;
-        width: 65%
+        /*width: 65%*/
     }
     .sub-section {
         float: right;
-        width: 33%;
+        /*width: 33%;*/
     }
     p {
         clear: left;
