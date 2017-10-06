@@ -1,0 +1,15 @@
+body {
+    padding: 20px;
+}
+h1{
+    background-color: #EEEEEE;
+    color: grey;
+    text-align: center;
+    opacity: 0.6;
+}
+.container img {
+    width: 100%
+}
+.pizza {
+    background-image: url("../img/pizza.png");
+}
