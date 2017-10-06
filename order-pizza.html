@@ -56,6 +56,8 @@
 	<li role="presentation"><a href="#"><span class="badge">3</span> Toppings</a></li>
 </ul>
 
+<form action="https://requestb.in/14m9wmf1" method="POST">
+
 <div class="panel panel-info">
 	<div class="panel-heading">Choose size and crust</div>
         <div class="panel-body">
@@ -68,7 +70,7 @@
                     <li class="list-group-item list-group-item-info">
                         <div class="radio">
                             <label>
-                                <input type="radio" name="crust" id="size-small" value="crust1" checked>
+                                <input type="radio" name="crust" id="size-small" value="hand-small" checked>
                                 Small (10")
                             </label>
                         </div>
@@ -77,7 +79,7 @@
 
                         <div class="radio">
                             <label>
-                                <input type="radio" name="crust" id="size-medium" value="crust2">
+                                <input type="radio" name="crust" id="size-medium" value="hand-medium">
                                 Medium (12")
                             </label>
                         </div>
@@ -95,7 +97,7 @@
                     <li class="list-group-item list-group-item-info">
                         <div class="radio">
                             <label>
-                                <input type="radio" name="crust" id="size-medium1" value="crust3">
+                                <input type="radio" name="crust" id="size-medium1" value="thin-medium">
                                 Medium (12")
                             </label>
                         </div>
@@ -103,7 +105,7 @@
                     <li class="list-group-item list-group-item-info">
                         <div class="radio">
                             <label>
-                                <input type="radio" name="crust" id="size-large" value="crust4">
+                                <input type="radio" name="crust" id="size-large" value="thin-large">
                                 Large (14")
                             </label>
                         </div>
@@ -126,11 +128,11 @@
             <div class="panel-heading">Cheese?</div>
                 <div class="panel-body list-group-item-info">
                     Cheese
-                    <select class="form-control">
-                        <option>Light</option>
-                        <option>Normal</option>
-                        <option>Extra</option>
-                        <option>Double</option>
+                    <select class="form-control" name="cheese-amount">
+                        <option value="light">Light</option>
+                        <option value="normal">Normal</option>
+                        <option value="extra">Extra</option>
+                        <option value="double">Double</option>
                     </select>
                 </div>
         </div>
@@ -140,17 +142,17 @@
         <div class="panel panel-default">
             <div class="panel-heading">Sauce?</div>
                 <ul class="list-group">
-                    <li class="list-group-item list-group-item-info">Sauce<select class="form-control">
-                        <option>Tomato Sauce</option>
-                        <option>Marinara Sauce</option>
-                        <option>BBQ Sauce</option>
-                        <option>Alfredo Sauce</option>
+                    <li class="list-group-item list-group-item-info">Sauce<select class="form-control" name="sauce">
+                        <option value="tomato">Tomato Sauce</option>
+                        <option value="Marinara">Marinara Sauce</option>
+                        <option value="BBQ Sauce">BBQ Sauce</option>
+                        <option value="Alfredo">Alfredo Sauce</option>
                     </select></li>
 
-                    <li class="list-group-item list-group-item-info">How much?<select class="form-control">
-                        <option>Light</option>
-                        <option>Normal</option>
-                        <option>Extra</option>
+                    <li class="list-group-item list-group-item-info">How much?<select class="form-control" name="sauce-amount">
+                        <option value="light">Light</option>
+                        <option value="normal">Normal</optionvalue>
+                        <option value="extra">Extra</option>
                     </select></li>
 
                     </ul>
@@ -176,7 +178,7 @@
                     <li class="list-group-item list-group-item-info">
                         <div class="checkbox">
                             <label>
-                                <input type="checkbox" value="meat1">
+                                <input type="checkbox" name="meat" value="beef">
                                     Beef
                             </label>
                         </div>
@@ -184,7 +186,7 @@
                     <li class="list-group-item list-group-item-info">
                         <div class="checkbox">
                             <label>
-                                <input type="checkbox" value="meat2">
+                                <input type="checkbox" name="meat" value="ham">
                                     Ham
                             </label>
                         </div>
@@ -192,7 +194,7 @@
                     <li class="list-group-item list-group-item-info">
                         <div class="checkbox">
                             <label>
-                                <input type="checkbox" value="meat3">
+                                <input type="checkbox" name="meat" value="Philly Steak">
                                     Philly Steak
                             </label>
                         </div>
@@ -200,7 +202,7 @@
                     <li class="list-group-item list-group-item-info">
                         <div class="checkbox">
                             <label>
-                                <input type="checkbox" value="meat4">
+                                <input type="checkbox" name="meat" value="bacon">
                                     Bacon
                             </label>
                         </div>
@@ -215,7 +217,7 @@
                     <li class="list-group-item list-group-item-info">
                     <div class="checkbox">
                         <label>
-                            <input type="checkbox" value="non-meat1">
+                            <input type="checkbox" name="non-meat" value="green-peppers">
                             Green Peppers
                         </label>
                     </div>
@@ -223,7 +225,7 @@
                     <li class="list-group-item list-group-item-info">
                         <div class="checkbox">
                             <label>
-                                <input type="checkbox" value="non-meat2">
+                                <input type="checkbox" name="non-meat" value="mushrooms">
                                 Mushrooms
                             </label>
                         </div>
@@ -231,7 +233,7 @@
                     <li class="list-group-item list-group-item-info">
                         <div class="checkbox">
                             <label>
-                                <input type="checkbox" value="non-meat3">
+                                <input type="checkbox" name="non-meat" value="onions">
                                 Onions
                             </label>
                         </div>
@@ -239,7 +241,7 @@
                     <li class="list-group-item list-group-item-info">
                         <div class="checkbox">
                             <label>
-                                <input type="checkbox" value="non-meat4">
+                                <input type="checkbox" name="non-meat" value="pineapple">
                                 Pineapple
                             </label>
                         </div>
@@ -253,5 +255,6 @@
             </p>
         </div>
     </div>
+</form>
 </body>
 </html>
