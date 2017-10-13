@@ -128,6 +128,9 @@ function identity(input) {
     return input;
     }
 
+    var name = "ana";
+
+console.log(name);
 
 //Write a function called `getRandomNumber(min, max)` that returns a random number
 // between min and max values sent to that funciton call.
