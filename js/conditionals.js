@@ -1,3 +1,4 @@
+(function (){
 
     "use strict";
 
@@ -235,9 +236,50 @@
 
 
 
+        // var luckyNumber = Math.floor(Math.random() * 6);
 
+        function calculateTotal (luckyNumber, totalAmount) {
+            var discountPrice;
+            var finalOutput;
 
+            if (luckyNumber < 0 || luckyNumber > 5) {
+                return "Invalid lucky number given!";
+            }
 
+            discountPrice = calculatePercentage(luckyNumber);
+            finalOutput = totalAmount - (totalAmount * discountPrice);
+
+            return finalOutput;
+        }
+
+        // console.log(calculateTotal(luckyNumber, 100));
+
+        function calculatePercentage(num) {
+
+            var discountPercent;
+
+            switch(num) {
+                case 0:
+                    discountPercent = 0;
+                    break;
+                case 1:
+                    discountPercent = .1;
+                    break;
+                case 2:
+                    discountPercent = .25;
+                    break;
+                case 3:
+                    discountPercent = .35;
+                    break;
+                case 4:
+                    discountPercent = .5;
+                    break;
+                case 5:
+                    discountPercent = 1;
+                    break;
+            }
+            return discountPercent;
+        }
 
 
 
@@ -251,6 +293,19 @@
          */
 // Generate a random number between 0 and 6
 // var luckyNumber = Math.floor(Math.random() * 6);
+
+    var luckyNumber = Math.floor(Math.random() * 6);
+    var totalBill = prompt("Please enter your total bill.");
+
+
+
+
+    alert("Your lucky number is: " + luckyNumber);
+    alert("Your total bill before the discount is: " + totalBill);
+    alert("Price after discount applied is: " + calculateTotal(luckyNumber, totalBill));
+
+
+
 
     /**
      * ================================= CONDITIONALS BONUSES
@@ -297,3 +352,7 @@
 
 
      */
+
+
+
+})();
