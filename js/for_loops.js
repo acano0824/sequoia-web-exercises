@@ -21,15 +21,21 @@
 // }
 
 
-    for (var i = 1; i <= 9; i++) {
-        debugger;
-        var string = i.toString();
-        var output = '';
-        for (var j = 0; j < i; j++) {
-            output += string;
-        }
-        console.log(output);
-    }
+// for (var i = 1; i <= 9; i++) {
+//     var string = i.toString();
+//     var output = '';
+//     for (var j = 0; j < i; j++) {
+//         output += string;
+//     }
+//     console.log(output);
+// }
+
+
+
+for (var i = 100; i >= 5; i -= 5) {
+    console.log(i);
+}
+
 
 
 
