@@ -59,18 +59,29 @@
      * and console.log the relevant messages for each person
      */
 
-    var shoppers = [
-        {name: 'Cameron', amount: 180},
-        {name: 'Ryan', amount: 250},
-        {name: 'George', amount: 320}
-    ];
-
-    shoppers.forEach(function(shoppers) {
-        console.log(shoppers.name + "'s amount after the discount is: " + shoppers.amount);
-    });
-
-
-
+    // var shoppers = [
+    //     {name: 'Cameron', amount: 180},
+    //     {name: 'Ryan', amount: 250},
+    //     {name: 'George', amount: 320}
+    // ];
+    //
+    // shoppers.forEach(function(shopper) {
+    //     console.log(shopper.name + "'s amount before the discount is: " + shopper.amount);
+    //     //if the amount is greater than 200 then apply discount
+    //     if (shopper.amount > 200) {
+    //         //apply discount
+    //
+    //         // var calculate discount amount
+    //         // display discount amount
+    //         //change amount property for shopper (apply discount)
+    //         var discount = shopper.amount * .12;
+    //         console.log("Discount applied! This is the discount: " + discount);
+    //         shopper.amount -= discount;
+    //     }
+    //
+    //     console.log(shopper.name + "'s amount after the discount is: " + shopper.amount);
+    //
+    // });
 
 
 
@@ -86,6 +97,62 @@
      * > console.log(books[0].author.firstName) // "Douglas"
      * > console.log(books[0].author.lastName) // "Adams"
      */
+
+
+    var books = [
+        {
+            title: "The Martian Chronicles",
+            author: {
+                firstName: "Ray",
+                lastName: "Bradbury"
+            }
+        },
+        {
+            title: "The Illustrated Man",
+            author: {
+                firstName: "Ray",
+                lastName: "Bradbury"
+            }
+        },
+        {
+            title: "Fahrenheit 451",
+            author: {
+                firstName: "Ray",
+                lastName: "Bradbury"
+            }
+        },
+        {
+            title: "The Golden Apples of the Sun",
+            author: {
+                firstName: "Ray",
+                lastName: "Bradbury"
+            }
+        },
+        {
+            title: "All You Need Is Kill",
+            author: {
+                firstName: "Hiroshi",
+                lastName: "Sakurazaka"
+            }
+        }
+    ];
+
+
+    // console.log(books[1].title);
+    // console.log(books[1].author.firstName);
+    // console.log(books[1].author.lastName);
+    //
+    // console.log("---------------------------");
+    //
+    // console.log(books[books.length -1].title);
+    // console.log(books[books.length -1].author.firstName);
+    // console.log(books[books.length -1].author.lastName);
+    //
+    // console.log("---------------------------");
+    //
+    // console.log(books[0].title);
+    // console.log(books[0].author.firstName);
+    // console.log(books[0].author.lastName);
 
     /**
      * TODO:
@@ -112,6 +179,18 @@
      *      ...
      */
 
+
+    // books.forEach(function(book, index) {
+    //         console.log("Book # " + index);
+    //         console.log("Title: " + book.title);
+    //         console.log("Author: " + book.author.firstName + " " + book.author.lastName);
+    //         console.log("---")
+    //     });
+
+
+
+
+
     /**
      * Bonus:
      * - Create a function named `createBook` that accepts a title and author
@@ -122,5 +201,56 @@
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
+
+
+
+//     var books = [
+//         {
+//             title: "The Martian Chronicles",
+//             author: {
+//                 firstName: "Ray",
+//                 lastName: "Bradbury"
+//             }
+//         },
+//         {
+//             title: "The Illustrated Man",
+//             author: {
+//                 firstName: "Ray",
+//                 lastName: "Bradbury"
+//             }
+//         },
+//         {
+//             title: "Fahrenheit 451",
+//             author: {
+//                 firstName: "Ray",
+//                 lastName: "Bradbury"
+//             }
+//         },
+//         {
+//             title: "The Golden Apples of the Sun",
+//             author: {
+//                 firstName: "Ray",
+//                 lastName: "Bradbury"
+//             }
+//         },
+//         {
+//             title: "All You Need Is Kill",
+//             author: {
+//                 firstName: "Hiroshi",
+//                 lastName: "Sakurazaka"
+//             }
+//         }
+//
+//
+//     ];
+//
+//      function showBookInfo() {
+//         return 'Title: ' + this.title + 'Author: ' + this.firstName + " " + this.lastName;
+//     }
+//
+//
+// console.log(showBookInfo(books));
+
+
 
 })();
