@@ -254,32 +254,32 @@
 
         // console.log(calculateTotal(luckyNumber, 100));
 
-        function calculatePercentage(num) {
-
-            var discountPercent;
-
-            switch(num) {
-                case 0:
-                    discountPercent = 0;
-                    break;
-                case 1:
-                    discountPercent = .1;
-                    break;
-                case 2:
-                    discountPercent = .25;
-                    break;
-                case 3:
-                    discountPercent = .35;
-                    break;
-                case 4:
-                    discountPercent = .5;
-                    break;
-                case 5:
-                    discountPercent = 1;
-                    break;
-            }
-            return discountPercent;
-        }
+        // function calculatePercentage(num) {
+        //
+        //     var discountPercent;
+        //
+        //     switch(num) {
+        //         case 0:
+        //             discountPercent = 0;
+        //             break;
+        //         case 1:
+        //             discountPercent = .1;
+        //             break;
+        //         case 2:
+        //             discountPercent = .25;
+        //             break;
+        //         case 3:
+        //             discountPercent = .35;
+        //             break;
+        //         case 4:
+        //             discountPercent = .5;
+        //             break;
+        //         case 5:
+        //             discountPercent = 1;
+        //             break;
+        //     }
+        //     return discountPercent;
+        // }
 
 
 
@@ -294,15 +294,15 @@
 // Generate a random number between 0 and 6
 // var luckyNumber = Math.floor(Math.random() * 6);
 
-    var luckyNumber = Math.floor(Math.random() * 6);
-    var totalBill = prompt("Please enter your total bill.");
-
-
-
-
-    alert("Your lucky number is: " + luckyNumber);
-    alert("Your total bill before the discount is: " + totalBill);
-    alert("Price after discount applied is: " + calculateTotal(luckyNumber, totalBill));
+    // var luckyNumber = Math.floor(Math.random() * 6);
+    // var totalBill = prompt("Please enter your total bill.");
+    //
+    //
+    //
+    //
+    // alert("Your lucky number is: " + luckyNumber);
+    // alert("Your total bill before the discount is: " + totalBill);
+    // alert("Price after discount applied is: " + calculateTotal(luckyNumber, totalBill));
 
 
 
@@ -314,22 +314,94 @@
 
      Create a function that prompts a user for their favorite day of the week and alerts a unique message based on the day.
      - Catch any invalid inputs.
-     - Write the logic using if/else ifs and then refactor using a switch case
+     - Write the logic using if/else ifs and then refactor using a switch case**/
 
-     Bonus 2
+    var favouriteDay = prompt("What is your favourite day of the week?")
+
+
+    // if (favouriteDay === "Monday") {
+    //     alert("That's the worst day of the week!");
+    // } else if (favouriteDay === "Tuesday") {
+    //     alert("Eh it's Taco Tuesday, so I'll allow it.");
+    // } else if (favouriteDay === "Wednesday") {
+    //     alert("Hump day!");
+    // } else if (favouriteDay === "Thursday") {
+    //     alert("THORSDAY.. You know.. for Thor.");
+    // } else if (favouriteDay === "Friday") {
+    //     alert("Woo! Time to Party!");
+    // } else if (favouriteDay === "Saturday") {
+    //     alert("It's still the weekend! Let's party!");
+    // } else if (favouriteDay === "Sunday") {
+    //     alert("Ew... Sunday means it's almost Monday..");
+    // } else {
+    //     alert("That's not a real day!");
+    // }
+
+
+    // switch(favouriteDay) {
+    //     case "Monday":
+    //         alert("That's the worst day of the week!");
+    //         break;
+    //     case "Tuesday":
+    //         alert("Eh it's Taco Tuesday, so I'll allow it.");
+    //         break;
+    //     case "Wednesday":
+    //         alert("Hump day!");
+    //         break;
+    //     case "Thursday":
+    //         alert("THORSDAY.. You know.. for Thor.");
+    //         break;
+    //     case "Friday":
+    //         alert("Woo! Time to Party!");
+    //         break;
+    //     case "Saturday":
+    //         alert("It's still the weekend! Let's party!");
+    //         break;
+    //     case "Sunday":
+    //         alert("Ew... Sunday means it's almost Monday..");
+    //         break;
+    //     default:
+    //         alert("That's not a real day!");
+    //         break;
+    // }
+
+
+
+
+     /**Bonus 2
 
      Create a function that prompts the user for an input and then alerts if the input is a number or not a number.
      - use an if/else
-     - refactor to use a ternary operator
+     - refactor to use a ternary operator**/
 
-     Bonus 3
+
+
+
+// function number(input) {
+//     prompt("Please enter a number: ")
+//     if (isNaN(input)) {
+//
+//     } else {
+//         alert("This isn't a number!");
+//     }
+//  }
+//
+//  console.log(number(2))
+
+
+
+
+
+
+
+     /**Bonus 3
 
      Create a function that prompts a user for a season (Spring, Summer, Fall (or Autumn), Winter). The function then alerts the months available in that season and then asks the user to pick a given month. After selecting the month, alert a unique message for the month.
      - account for any invalid user input
      - case of input should not matter
-     - accept both abbreviations and full names of the months
+     - accept both abbreviations and full names of the months**/
 
-     GOLD STAR BONUS
+     /**GOLD STAR BONUS
 
      Create a distance unit conversion application.
      Prompt the user for a unit of measurement.
@@ -344,9 +416,9 @@
      Use these conversion functions to make the correct unit conversion
 
      Potentially, you will need a large switch case to account for the possible unit conversion combinations,
-     i.e. what conversion functions will need to be called in and in what order.
+     i.e. what conversion functions will need to be called in and in what order.**/
 
-     DOUBLE GOLD STAR BONUS
+     /**DOUBLE GOLD STAR BONUS
 
      Allow unit conversion to metric system units
 
