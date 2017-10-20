@@ -204,6 +204,23 @@
 
 
 
+    function createBook(title, authorFirstName, authorLastName) {
+        return {
+            title: title,
+            authorFirstName: authorFirstName,
+            authorLastName: authorLastName,
+        };
+    }
+
+            showBookInfo: function() {
+                return 'Title: ' + this.title + 'Author: ' + this.firstName + " " + this.lastName;
+            }
+
+            console.log(createBook.showBookInfo("The Illustrated Man", "Ray", "Bradbury"));
+
+
+
+
 //     var books = [
 //         {
 //             title: "The Martian Chronicles",
@@ -244,7 +261,7 @@
 //
 //     ];
 //
-//      function showBookInfo() {
+//      showBookInfo: function() {
 //         return 'Title: ' + this.title + 'Author: ' + this.firstName + " " + this.lastName;
 //     }
 //
