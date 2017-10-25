@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon">
+
+    <title>Google Maps Test</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+    <style>
+
+        #map {
+            width: 80vw;
+            height: 80vh;
+        }
+
+    </style>
+
+</head>
+<body>
+
+<main class="container">
+
+    <h1 class="text-center">Google Maps Test</h1>
+
+    <br>
+
+    <div class="center-block" id="map"></div>
+
+</main>
+
+<!-- jQuery Version 2.2.4 -->
+<script src="http://code.jquery.com/jquery-2.2.4.min.js"></script>
+
+<!-- Bootstrap JS -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<!-- Google Maps -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_5EpAVIKBObHJCwdH00sUl2o1IgQ4Ll4"></script>
+
+<!-- Custom JS -->
+<script>
+
+    "use strict";
+
+    // ============== BUILD MAP
+    var mapOptions = {
+        zoom: 19,
+        center: {
+            lat:  29.6103,
+            lng: -98.4978
+        }
+    };
+
+    var restaurant = {
+        name: "Chama Gaucha",
+        address: "18318 Sonterra Pl, San Antonio, TX 78258",
+        info: "The best food ever!"
+    };
+
+    function initMap(optionsObject) {
+        return new google.maps.Map(document.getElementById("map"), optionsObject);
+    }
+
+    var map = initMap(mapOptions);
+
+
+    //  ============== GEOCODING
+
+    function getLocation(address) {
+
+        var geocoder = new google.maps.Geocoder();
+
+        geocoder.geocode({address: restaurant.address}, function(results, status) {
+            if (status == google.maps.GeocoderStatus.OK) {
+                var position = results[0].geometry.location;
+                return position;
+            } else {
+                return alert("Geocoding unsuccessful");
+            }
+        });
+
+    }
+
+    addMarkerAndInfoWindow(getLocation(restaurant.address), restaurant.name, restaurant.info);
+
+
+    //  ============== ADD MARKER AND INFO WINDOW
+
+
+    function addMarkerAndInfoWindow(position, name, infoText) {
+
+        var chama = { lat: 29.6103, lng: -98.4978};
+        var marker = new google.maps.Marker({
+            position: chama,
+            map: map
+        });
+
+        var infoWindowContent = '<h3>' + name + '</h3>';
+        infoWindowContent += '<p>' + infoText + '</p>';
+
+        var infoWindow = new google.maps.InfoWindow({
+            content: infoWindowContent
+        });
+
+        infoWindow.open(map, marker);
+
+    }
+
+
+
+</script>
+
+</body>
+</html>
