@@ -76,28 +76,29 @@
 
         var geocoder = new google.maps.Geocoder();
 
-        geocoder.geocode({address: restaurant.address}, function(results, status) {
+        geocoder.geocode({address: address}, function(results, status) {
             if (status == google.maps.GeocoderStatus.OK) {
                 var position = results[0].geometry.location;
-                return position;
+                addMarkerAndInfoWindow(position, restaurant.name, restaurant.info);
             } else {
-                return alert("Geocoding unsuccessful");
+                alert("Geocoding unsuccessful");
             }
         });
 
     }
 
-    addMarkerAndInfoWindow(getLocation(restaurant.address), restaurant.name, restaurant.info);
-
+        getLocation(restaurant.address);
 
     //  ============== ADD MARKER AND INFO WINDOW
 
 
     function addMarkerAndInfoWindow(position, name, infoText) {
+        console.log(position);
+        console.log(name);
+        console.log(infoText);
 
-        var chama = { lat: 29.6103, lng: -98.4978};
         var marker = new google.maps.Marker({
-            position: chama,
+            position: position,
             map: map
         });
 
