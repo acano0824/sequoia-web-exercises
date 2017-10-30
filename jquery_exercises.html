@@ -46,7 +46,7 @@
 //        alert(element); // select id
 //        console.log(element);
 
-        var element = $("li, h1, p"); // select combinations
+//        var element = $("li, h1, p"); // select combinations
 //        var element = $("*"); // select all
 
 //        var contents = $('h1').html();
@@ -80,7 +80,33 @@
 //                "color": "yellow"
 //            });
 
-    $(element).css("background-color", "red").css("color", "yellow");
+//    $(element).css("background-color", "red").css("color", "yellow");
+
+        $('h1').click(function () {
+            alert('you clicked an h1 element!');
+            var clickedElement = this;
+            clickedElement.style.backgroundColor = 'pink';
+        });
+
+        $('p').dblclick(function () {
+            alert('you clicked a paragraph element!');
+            var clickedElement = this;
+            clickedElement.style.fontSize = '18px';
+        });
+
+
+
+        function startHover() {
+            var hoverElement = this;
+            hoverElement.style.color = 'red';
+        }
+
+        function stopHover() {
+            var stop = this;
+            stop.style.color = 'black';
+        }
+
+        $('li').hover(startHover, stopHover);
 
     });
 
