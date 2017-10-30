@@ -6,20 +6,20 @@
 </head>
 <body>
 
-<h1 class="main">Hello World</h1>
+<h1>Hello World</h1>
 <p>My name is <strong>Ashley</strong>. Here are some fun facts about me:</p>
 <ol>
-    <li id="artist">I am an artist</li>
+    <li>I am an artist</li>
     <li>I <em>love</em> to cosplay!</li>
 </ol>
-<div id="quote">My Favourite Quote</div>
+<div>My Favourite Quote</div>
 <blockquote>It's only after we've lost everything, that we're free to do anything. <br>-Tyler Durden</blockquote>
 
-<h1 class="main">My Top 5 Favourite Foods.</h1>
+<h1>My Top 5 Favourite Foods.</h1>
 <ul>
-    <li>Ramen</li>
-    <li>Strawberries</li>
-    <li>Grapes</li>
+    <li class="codeup">Ramen</li>
+    <li class="codeup">Strawberries</li>
+    <li id="codeup">Grapes</li>
     <li>Watermelon</li>
     <li>Kastudon</li>
 </ul>
@@ -39,12 +39,12 @@
 //        var element = $("h1"); // select tag
 //        console.log(element);
 
-//        var element = $("p"); // select class
+//        var element = $("codeup"); // select class
 //        console.log(element);
 
-        var element = $("#artist").html();
-        alert(element); // select id
-        console.log(element);
+//        var element = $("#quote").html();
+//        alert(element); // select id
+//        console.log(element);
 
 //        var element = $("li, .paragraph"); // select combinations
 //        var element = $("*"); // select all
@@ -69,15 +69,15 @@
 //        element.text(mainText);
 
         // single CSS property
-//            element.css("border", "10px solid black");
+            $('codeup').css("border", "1px solid #F00");
 
         // multiple CSS properties
-//            $('main').css({
+//            $('codeup').css({
 //                "background-color": "red",
 //                "color": "yellow"
 //            });
 
-//    $('main').css("background-color", "red").css("color", "yellow");
+//    $('codeup').css("background-color", "red").css("color", "yellow");
 
     });
 
