@@ -5,12 +5,21 @@
 </head>
 <body>
 
+<div id="chocobo">
+    <img src="img/chocobo.gif" alt="">
+</div>
 
 <style>
     body {
         background-image: url('img/squaresoft1.png');
         background-size: cover;
     }
+    #chocobo {
+        display: none;
+        position: fixed;
+        left: 800px;
+    }
+
 </style>
 
 <script src="js/jquery-2.2.4.js"></script>
@@ -59,15 +68,19 @@ if (konamiCodePosition == konamiCode.length) {
 });
 
 function activateCheats() {
-document.body.style.backgroundImage = "url('img/ffvii-victory.gif')";
-setTimeout(function(){
-    document.body.style.backgroundImage = "url('img/squaresoft1.png')";
-}, 4000)
+    document.body.style.backgroundImage = "url('img/ffvii-victory.gif')";
+    $('#chocobo').toggle(function() {
+        $('#chocobo').animate({left: '800px'});
+
+    });
+
+    setTimeout(function(){
+        document.body.style.backgroundImage = "url('img/squaresoft1.png')";
+    }, 4000)
 
 
-var audio = new Audio('audio/ffvii.mp3');
-audio.play();
-
+    var audio = new Audio('audio/ffvii.mp3');
+    audio.play();
 
 }
 
