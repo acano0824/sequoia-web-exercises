@@ -15,9 +15,7 @@
         background-size: cover;
     }
     #chocobo {
-        display: none;
         position: fixed;
-        left: 800px;
     }
 
 </style>
@@ -69,14 +67,12 @@ if (konamiCodePosition == konamiCode.length) {
 
 function activateCheats() {
     document.body.style.backgroundImage = "url('img/ffvii-victory.gif')";
-    $('#chocobo').toggle(function() {
-        $('#chocobo').animate({left: '800px'});
 
-    });
+    $('#chocobo').animate({left: '800px'});
 
     setTimeout(function(){
         document.body.style.backgroundImage = "url('img/squaresoft1.png')";
-    }, 4000)
+    }, 4000);
 
 
     var audio = new Audio('audio/ffvii.mp3');
