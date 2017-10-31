@@ -60,12 +60,14 @@ if (konamiCodePosition == konamiCode.length) {
 
 function activateCheats() {
 document.body.style.backgroundImage = "url('img/ffvii-victory.gif')";
+setTimeout(function(){
+    document.body.style.backgroundImage = "url('img/squaresoft1.png')";
+}, 4000)
 
 
 var audio = new Audio('audio/ffvii.mp3');
 audio.play();
 
-$('img').css('transition', 'linear');
 
 }
 
