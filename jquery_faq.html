@@ -3,16 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <title>National Park FAQ</title>
+
+
+    <style>
+
+        .invisible {
+            color: transparent;
+        }
+        ul.hidden {
+            display:none;
+        }
+    </style>
+
 </head>
 <body>
 
-<style>
+<main class="container">
 
-    .invisible {
-        display: none;
-    }
-</style>
+<div>
+    <h1>Would you like to sign up for our newsletter?</h1>
+    <span id="hideDiv">x</span>
 
+</div>
 
 <h2>Questions often Asked</h2>
 <dl>
@@ -97,57 +109,64 @@
 
 </dl>
 
-<h3><a id="toggle" href="">Show/Hide Answers</a></h3>
+    <h3><a id="toggle" href="">Show/Hide Answers</a></h3>
+
+    <h2>Register Now!</h2>
+
+    <h3 id="national-parks-heading">National Parks</h3>
+    <ul id="national-parks" class="hidden">
+        <li>Arches</li>
+        <li>Badlands</li>
+        <li>Carlsbad Caverns</li>
+        <li>Denali</li>
+        <li>Everglades</li>
+    </ul>
+    <h3 id="state-parks-texas-heading">State Parks of Texas</h3>
+    <ul id="state-parks-texas" class="hidden">
+        <li>Abilene</li>
+        <li>Big Bend</li>
+        <li>Choke Canyon</li>
+        <li>Davis Mountains</li>
+        <li>Enchanted Rock</li>
+    </ul>
+    <h3 id="national-parks-heading1">National Parks</h3>
+    <ul id="national-parks1" class="hidden">
+        <li>Arches</li>
+        <li>Badlands</li>
+        <li>Carlsbad Caverns</li>
+        <li>Denali</li>
+        <li>Everglades</li>
+    </ul>
 
 
-<h3 id="national-parks-heading">National Parks</h3>
-<ul id="national-parks">
-    <li>Arches</li>
-    <li>Badlands</li>
-    <li>Carlsbad Caverns</li>
-    <li>Denali</li>
-    <li>Everglades</li>
-</ul>
-<h3>State Parks of Texas</h3>
-<ul id="state-parks-texas">
-    <li>Abilene</li>
-    <li>Big Bend</li>
-    <li>Choke Canyon</li>
-    <li>Davis Mountains</li>
-    <li>Enchanted Rock</li>
-</ul>
-<h3 id="national-parks-heading1">National Parks</h3>
-<ul id="national-parks1">
-    <li>Arches</li>
-    <li>Badlands</li>
-    <li>Carlsbad Caverns</li>
-    <li>Denali</li>
-    <li>Everglades</li>
-</ul>
+</main>
+
+<script src="./js/jquery-2.2.4.js"></script>
+
+<script type="text/javascript">
+
+    $(document).ready(function() {
+
+        "use strict";
+
+        $("#hideDiv").click(function() {
+            $("div").hide();
+        });
+
+        $('h3').click(function() {
+            $('.hidden').toggle().slideDown();
+        });
 
 
-<script src="js/jquery-2.2.4.js">
+        $('h2').click(function() {
+           $('h2').fadeIn();
+        });
 
-var highLightBtn = $('#highlightBtn');
 
-highLightBtn.click(function() {
 
-    $('ul').each(function(index, element) {
-        $(element).children().last().css("background-color", "yellow");
+
 
     });
-
-});
-
-$('h3').click(function() {
-    $(this).next().children().css("font-weight", "bold");
-});
-
-$('li').click(function() {
-   $(this).parent().children().first().css("color", "blue");
-});
-
-
 </script>
 </body>
 </html>
