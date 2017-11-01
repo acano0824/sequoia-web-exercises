@@ -123,20 +123,30 @@
     <li>Carlsbad Caverns</li>
     <li>Denali</li>
     <li>Everglades</li>
-
+</ul>
 
 
 <script src="js/jquery-2.2.4.js">
 
+var highLightBtn = $('#highlightBtn');
 
-    $('#toggle').click(function(e) {
-        e.preventDefault();
-        $("dd").toggleClass("invisible");
+highLightBtn.click(function() {
+
+    $('ul').each(function(index, element) {
+        $(element).children().last().css("background-color", "yellow");
+
     });
 
-    $("dt").click(function(e) {
-        $(this).css("background-color", "yellow");
-    });
+});
+
+$('h3').click(function() {
+    $(this).next().children().css("font-weight", "bold");
+});
+
+$('li').click(function() {
+   $(this).parent().children().first().css("color", "blue");
+});
+
 
 </script>
 </body>
