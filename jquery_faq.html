@@ -5,7 +5,7 @@
     <title>National Park FAQ</title>
 
 
-    <style>
+    <style type="text/css">
 
         .invisible {
             color: transparent;
@@ -113,7 +113,7 @@
 
 </dl>
 
-    <h3><a id="toggle" href="">Show/Hide Answers</a></h3>
+    <button id="toggleAnswersBtn">Toggle Answers</button>
 
     <h2>Register Now!</h2>
 
@@ -152,6 +152,10 @@
     $(document).ready(function() {
 
         "use strict";
+
+        $('#toggleAnswersBtn').click(function(e) {
+            $("dd").toggleClass("invisible");
+        });
 
         $("#hideDiv").click(function() {
             $("div").hide();
