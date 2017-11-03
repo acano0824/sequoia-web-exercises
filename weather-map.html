@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <title>Document</title>
+</head>
+<body>
+
+<style>
+
+
+
+</style>
+
+<h1>Weather Application</h1>
+
+<div>San Antonio</div>
+
+<div class="panel-body" id="weatherData"></div>
+
+<script src="js/jquery-2.2.4.js"></script>
+<script>
+
+
+    $(document).ready(function () {
+        "use strict";
+
+         function makeRequestAndUpdatePage() {
+
+             var begin = $.get("http://api.openweathermap.org/data/2.5/forecast/daily", {
+                 APPID: "7f8e3aa0aad113510e0c1eaafd1c17b8",
+                 cnt: 3,
+                 lat: 29.42301,
+                 lon: -98.48527,
+                 units: 'imperial'
+             });
+             begin.fail(function (arg1, arg2, arg3) {
+                 console.log(arg1);
+                 console.log(arg2);
+                 console.log(arg3);
+             });
+             begin.done(function (data) {
+                         console.log(data);
+
+                 buildHTML(data);
+
+             });
+
+         }
+    makeRequestAndUpdatePage();
+});
+
+     function buildHTML(data) {
+         var weatherHTML = "";
+
+
+         data.list.forEach(function (forecast) {
+
+             weatherHTML += "<section>";
+             weatherHTML += "<p>" + forecast.temp.max + "/" + forecast.temp.min + "</p>";
+             weatherHTML += "<img src='http://openweathermap.org/img/w/" + forecast.weather[0].icon + ".png'>";
+             weatherHTML += "<p>" + forecast.weather[0].main + ": " + forecast.weather[0].description + "</p>";
+             weatherHTML += "<p> Humidity: " + forecast.humidity + "</p>";
+             weatherHTML += "<p> Wind: " + forecast.speed + "</p>";
+             weatherHTML += "<p> Pressure: " + forecast.pressure + "</p>";
+
+             weatherHTML += "</section>";
+         });
+
+         $("#weatherData").html(weatherHTML);
+
+         }
+
+
+//     $('#update').click(makeRequestAndUpdatePage);
+
+
+
+</script>
+</body>
+</html>
