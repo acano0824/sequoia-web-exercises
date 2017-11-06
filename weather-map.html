@@ -46,7 +46,7 @@
         }
         #map-canvas {
             height: 500px;
-            width: 96vw;
+            width: 97vw;
 
         }
 
@@ -70,7 +70,7 @@
 </div>
 
 <script src="js/jquery-2.2.4.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"crossorigin="anonymous"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_5EpAVIKBObHJCwdH00sUl2o1IgQ4Ll4"></script>
 <script type="text/javascript">
 
@@ -91,27 +91,34 @@
 
 
 
-
-        var pin = google.maps.event.addListener(map, "click", function(e) {
+        google.maps.event.addListener(map, "click", function(e) {
             var position = {lat: e.latLng.lat(), lng: e.latLng.lng()};
+                console.log(position);
+
             var marker = new google.maps.Marker({
                 position: position,
                 map: map,
                 draggable: true,
                 animation: google.maps.Animation.DROP
             });
-            return position;
+            makeRequestAndUpdatePage(position, map);
+
+            google.maps.event.addListener(marker, "dragend", function(e) {
+               makeRequestAndUpdatePage(e.latLng, map);
+            });
         });
 
 
 
-         function makeRequestAndUpdatePage() {
+
+
+         function makeRequestAndUpdatePage(position, map) {
 
              var begin = $.get("http://api.openweathermap.org/data/2.5/forecast/daily", {
                  APPID: "7f8e3aa0aad113510e0c1eaafd1c17b8",
                  cnt: 3,
-                 lat: pin.lat,
-                 lon: pin.lng,
+                 lat: position.lat,
+                 lon: position.lng,
                  units: 'imperial'
              });
              begin.fail(function (arg1, arg2, arg3) {
@@ -128,7 +135,7 @@
 
          }
 
-        makeRequestAndUpdatePage();
+
 
          function buildHTML(data) {
              var weatherHTML = "";
