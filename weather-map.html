@@ -34,6 +34,18 @@
     .panel-body {
         background-color: #2b669a;
     }
+    .round-box {
+        border-radius: 5px 30px 30px 30px;
+    }
+    .center {
+        display: flex;
+        justify-content: center;
+    }
+    .btn {
+    ;
+    }
+
+
 
 </style>
 
@@ -42,11 +54,21 @@
 
     <h1>Weather Application</h1>
 
-        <p class="city">San Antonio</p>
-
 <div class="panel-body" id="weatherData"></div>
 
+
+<div class="row center">
+    <input type="text" id="latitude" class="round-box" placeholder="Latitude">
+    <input type="text" id="longitude" class="round-box" placeholder="Longitude">
+    <button class="btn btn-info" id="update">Search</button>
+</div>
+
+
+
+</div>
+
 <script src="js/jquery-2.2.4.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"crossorigin="anonymous"></script>
 <script>
 
 
@@ -58,8 +80,8 @@
              var begin = $.get("http://api.openweathermap.org/data/2.5/forecast/daily", {
                  APPID: "7f8e3aa0aad113510e0c1eaafd1c17b8",
                  cnt: 3,
-                 lat: 29.42301,
-                 lon: -98.48527,
+                 lat: $("#latitude").val(),
+                 lon: $("#longitude").val(),
                  units: 'imperial'
              });
              begin.fail(function (arg1, arg2, arg3) {
@@ -75,12 +97,11 @@
              });
 
          }
-    makeRequestAndUpdatePage();
-});
+//    makeRequestAndUpdatePage();
 
      function buildHTML(data) {
          var weatherHTML = "";
-
+        weatherHTML += "<p class='city'>" + data.city.name + "</p>";
 
          data.list.forEach(function (forecast) {
 
@@ -99,10 +120,13 @@
          }
 
 
-//     $('#update').click(makeRequestAndUpdatePage);
+     $('#update').click(function() {
+
+         makeRequestAndUpdatePage();
+    });
 
 
-
+});
 </script>
 </body>
 </html>
