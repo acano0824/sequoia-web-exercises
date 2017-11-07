@@ -41,7 +41,7 @@
         display: flex;
         justify-content: space-around;
         align-items: center;
-        margin: 6px 10px auto;
+        margin: -10px 25px auto;
     }
 
     &:active {
@@ -60,6 +60,7 @@
         width: 90px;
         height: 90px;
         border-radius: 15px 50px;
+        transform: rotate(45deg);
     }
 
     #green {
@@ -68,6 +69,7 @@
         width: 90px;
         height: 90px;
         border-radius: 15px 50px;
+        transform: rotate(-25deg);
     }
 
     #red {
@@ -76,6 +78,7 @@
         width: 90px;
         height: 90px;
         border-radius: 50px 15px;
+        transform: rotate(25deg);
     }
 
     #yellow {
@@ -145,7 +148,7 @@
             <div class="middle-row">
                 <div id="green" class="gamebutton" onClick="addToPlayer(this.id)"></div>
                 <div id="gameNumber">
-                    <h2 id="clickNumber">0</h2></div>
+                    <h2 id="clickNumber" style="margin-top: 83px;">0</h2></div>
                 <div id="red" class="gamebutton" onClick="addToPlayer(this.id)"></div>
             </div>
             <div class="bottom-row">
