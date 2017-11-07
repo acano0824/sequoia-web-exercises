@@ -87,6 +87,11 @@
         border-radius: 50px 15px;
     }
 
+    #button {
+        display: flex;
+        justify-content: center;
+    }
+
 
 </style>
 
@@ -94,17 +99,17 @@
     <div class="col-md-12">
         <div class="gamefield">
             <div class="top-row">
-                <div id="blue" class="gamebutton" onClick="addToPlayer(this.id)"></div>
+                <div id="blue" class="gamebutton"></div>
             </div>
             <div class="middle-row">
-                <div id="green" class="gamebutton" onClick="addToPlayer(this.id)"></div>
+                <div id="green" class="gamebutton"></div>
                 <div id="gameNumber">
                     <h2 id="clickNumber" style="margin-top: 83px;">0</h2></div>
-                <div id="red" class="gamebutton" onClick="addToPlayer(this.id)"></div>
+                <div id="red" class="gamebutton"></div>
             </div>
             <div class="bottom-row">
-                <div id="pink" class="gamebutton" onClick="addToPlayer(this.id)"></div>
-                <div id="yellow" class="gamebutton" onClick="addToPlayer(this.id)"></div>
+                <div id="pink" class="gamebutton"></div>
+                <div id="yellow" class="gamebutton"></div>
             </div>
                 <div id="button">
                     <button class="btn" id="update">Start</button>
@@ -114,6 +119,31 @@
 </div>
 
 
+<script src="js/jquery-2.2.4.js"></script>
+<script>
 
+    $(".gamebutton").hover(function() {
+        var borderColor = $(this).css("border-color");
+        $(this).css("background-color", borderColor);
+    }, function() {
+       $(this).css("background-color", "black");
+    });
+
+   var gameButtons = $(".gamebutton");
+
+   $("#update").click(function() {
+       setInterval(function() {
+            var math = Math.floor(Math.random() * 5) + 0
+            var Color = $(gameButtons[math]).css("border-color");
+            $(gameButtons[math]).css("background-color", Color);
+            setTimeout(function() {
+                $(gameButtons[math]).css("background-color", "black");
+            }, 1000);
+        }, 2000);
+   });
+
+
+
+</script>
 </body>
 </html>
