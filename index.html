@@ -41,17 +41,7 @@
         display: flex;
         justify-content: space-around;
         align-items: center;
-        margin: -10px 25px auto;
-    }
-
-    &:active {
-     // DO NOT USE HOVER  (better mobile performance)
-     background-color: black;
-     }
-    }
-
-    .onhover() {
-        background-color: black;
+        margin: 10px 35px auto;
     }
 
     #blue {
@@ -83,7 +73,7 @@
 
     #yellow {
         border: 4px solid #FFC857;
-        margin: 50px 0 50px 90px;
+        margin: 42px 24px 50px 23px;
         width: 90px;
         height: 90px;
         border-radius: 15px 50px;
@@ -91,51 +81,12 @@
 
     #pink {
         border: 4px solid #FF9FC7;
-        margin: 50px 0 50px 40px;
+        margin: 43px 20px 50px 25px;
         width: 90px;
         height: 90px;
         border-radius: 50px 15px;
     }
 
-    #blue.hover {
-        background-color: black;
-        (@tiffany-blue);
-    }
-
-    #green.hover {
-        background-color: black;
-        (@kelly-green);
-    }
-
-    #red.hover {
-        background-color: black;
-        (@red);
-    }
-
-    #yellow.hover {
-        background-color: black;
-        (@yellow);
-    }
-    #pink.hover {
-        background-color: black;
-        (@pink);
-    }
-
-    .btn-sett {
-        font-size: 2.7em;
-        text-align: left;
-        transition: 500ms;
-        width: 70px;
-        margin-right: 340px;
-    &:hover {
-         color:  @kelly-green;
-     }
-    }
-
-    .black {
-        color: @rich-black;
-        text-align: center;
-    }
 
 </style>
 
@@ -154,11 +105,13 @@
             <div class="bottom-row">
                 <div id="pink" class="gamebutton" onClick="addToPlayer(this.id)"></div>
                 <div id="yellow" class="gamebutton" onClick="addToPlayer(this.id)"></div>
-                <div>
-                </div>
             </div>
+                <div id="button">
+                    <button class="btn" id="update">Start</button>
+                </div>
         </div>
-
+    </div>
+</div>
 
 
 
