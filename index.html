@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="js/bootstrap.js">
+    <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+    <title>Simple Simon</title>
+</head>
+<body>
+
+<style>
+
+    body {
+        background-color: black;
+        color: white;
+        font-family: 'Anton', sans-serif;
+    }
+
+    .gamefield {
+        max-width: 480px;
+        margin: 20px auto;
+    }
+
+
+    .top-row {
+        display: flex;
+        justify-content: center;
+    }
+
+    .middle-row {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 9px auto;
+    }
+
+    .bottom-row {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 6px 10px auto;
+    }
+
+    &:active {
+     // DO NOT USE HOVER  (better mobile performance)
+     background-color: black;
+     }
+    }
+
+    .onhover() {
+        background-color: black;
+    }
+
+    #blue {
+        border: 4px solid #477998;
+        margin: 20px;
+        width: 90px;
+        height: 90px;
+        border-radius: 15px 50px;
+    }
+
+    #green {
+        border: 4px solid #8ACB88;
+        margin: 20px;
+        width: 90px;
+        height: 90px;
+        border-radius: 15px 50px;
+    }
+
+    #red {
+        border: 4px solid #C43F51;
+        margin: 20px;
+        width: 90px;
+        height: 90px;
+        border-radius: 50px 15px;
+    }
+
+    #yellow {
+        border: 4px solid #FFC857;
+        margin: 50px 0 50px 90px;
+        width: 90px;
+        height: 90px;
+        border-radius: 15px 50px;
+    }
+
+    #pink {
+        border: 4px solid #FF9FC7;
+        margin: 50px 0 50px 40px;
+        width: 90px;
+        height: 90px;
+        border-radius: 50px 15px;
+    }
+
+    #blue.hover {
+        background-color: black;
+        (@tiffany-blue);
+    }
+
+    #green.hover {
+        background-color: black;
+        (@kelly-green);
+    }
+
+    #red.hover {
+        background-color: black;
+        (@red);
+    }
+
+    #yellow.hover {
+        background-color: black;
+        (@yellow);
+    }
+    #pink.hover {
+        background-color: black;
+        (@pink);
+    }
+
+    .btn-sett {
+        font-size: 2.7em;
+        text-align: left;
+        transition: 500ms;
+        width: 70px;
+        margin-right: 340px;
+    &:hover {
+         color:  @kelly-green;
+     }
+    }
+
+    .black {
+        color: @rich-black;
+        text-align: center;
+    }
+
+</style>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="gamefield">
+            <div class="top-row">
+                <div id="blue" class="gamebutton" onClick="addToPlayer(this.id)"></div>
+            </div>
+            <div class="middle-row">
+                <div id="green" class="gamebutton" onClick="addToPlayer(this.id)"></div>
+                <div id="gameNumber">
+                    <h2 id="clickNumber">0</h2></div>
+                <div id="red" class="gamebutton" onClick="addToPlayer(this.id)"></div>
+            </div>
+            <div class="bottom-row">
+                <div id="pink" class="gamebutton" onClick="addToPlayer(this.id)"></div>
+                <div id="yellow" class="gamebutton" onClick="addToPlayer(this.id)"></div>
+                <div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+</body>
+</html>
