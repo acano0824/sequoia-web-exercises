@@ -3,31 +3,60 @@
  */
 const users = [
   {
+    id: 1,
     name: 'zach',
     email: 'zach@codeup.com',
     languages: ['javascript', 'bash']
   },
   {
+    id: 2,
     name: 'ryan',
     email: 'ryan@codeup.com',
     languages: ['clojure', 'javascript']
   },
   {
+    id: 3,
     name: 'luis',
     email: 'luis@codeup.com',
     languages: ['java', 'scala', 'php']
   },
   {
+    id: 4,
     name: 'fernando',
     email: 'fernando@codeup.com',
     languages: ['java', 'php', 'sql']
   },
   {
+    id: 5,
     name: 'justin',
     email: 'justin@codeup.com',
     languages: ['html', 'css', 'javascript', 'php']
   }
 ];
+
+
+const threeLanguages = users.filter((three) => {
+
+if() {
+
+  return
+}
+
+});
+
+  console.log(threeLanguages);
+
+
+
+
+
+
+
+
+
+
+
+
 
 // TODO: fill in your name and email and add some programming languages you know
 // to the languages array
@@ -106,3 +135,5 @@ for (let developer of developers) {
 list+= `</ul>`;
 
   $('.developers').html(list);
+
+
