@@ -35,12 +35,9 @@ const users = [
 ];
 
 
-const threeLanguages = users.filter((three) => {
+const threeLanguages = users.filter((user) => {
 
-if() {
-
-  return
-}
+  return (user.languages.length >= 3);
 
 });
 
@@ -48,7 +45,23 @@ if() {
 
 
 
+const emailsArray = users.map((user) => {
 
+  return (user.email);
+
+});
+
+  console.log(emailsArray);
+
+
+
+  const userReduction = users.reduce((accumulator, user) => {
+
+    return accumulator + user;
+
+  }, );
+
+    console.log(userReduction);
 
 
 
