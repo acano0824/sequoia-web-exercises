@@ -235,7 +235,7 @@ const emailsArray = users.map((user) => {
   });
 
 
-  console.log(custArray);
+  // console.log(custArray);
 
 
 
@@ -243,27 +243,27 @@ const emailsArray = users.map((user) => {
 
 
 
+const civilServ = customers.filter((customer) => {
 
+  return customer.occupation === "Police Officer" || customer.occupation === "Teacher";
 
+});
 
-
-
-
-
-
-
-
-
-
+  // console.log(civilServ);
 
 
 
 //            PROBLEM 4 HINT - use .reduce()
 
 
+let i = -1;
+const averageCust = customers.reduce((average, customer) => {
+    i++;
+    return (average * i + customer.age) / (i + 1);
+}, 0);
 
 
-
+console.log(averageCust);
 
 
 
