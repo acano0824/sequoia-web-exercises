@@ -57,9 +57,10 @@ const emailsArray = users.map((user) => {
 
   const userReduction = users.reduce((accumulator, user) => {
 
-    return accumulator + user;
+    accumulator[user.id] = user.name;
+      return accumulator;
 
-  }, );
+  }, {});
 
     console.log(userReduction);
 
