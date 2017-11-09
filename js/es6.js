@@ -35,41 +35,11 @@ const users = [
 ];
 
 
-const threeLanguages = users.filter((user) => {
-
-  return (user.languages.length >= 3);
-
-});
-
-  console.log(threeLanguages);
-
-
-
-const emailsArray = users.map((user) => {
-
-  return (user.email);
-
-});
-
-  console.log(emailsArray);
-
-
-
-  const userReduction = users.reduce((accumulator, user) => {
-
-    accumulator[user.id] = user.name;
-      return accumulator;
-
-  }, {});
-
-    console.log(userReduction);
 
 
 
 
-
-
-
+//========== ES6 EXERCISES ==========
 
 
 // TODO: fill in your name and email and add some programming languages you know
@@ -149,5 +119,155 @@ for (let developer of developers) {
 list+= `</ul>`;
 
   $('.developers').html(list);
+
+
+
+
+
+
+// =========== MAPS, REDUCE, FILTER EXERCISE =========
+
+const threeLanguages = users.filter((user) => {
+
+  return (user.languages.length >= 3);
+
+});
+
+  // console.log(threeLanguages);
+
+
+
+const emailsArray = users.map((user) => {
+
+  return (user.email);
+
+});
+
+  // console.log(emailsArray);
+
+
+
+  const userReduction = users.reduce((accumulator, user) => {
+
+    accumulator[user.id] = user.name;
+      return accumulator;
+
+  }, {});
+
+    // console.log(userReduction);
+
+
+
+
+
+
+  // ============ MAP FILTER REDUCE BONUSES ============
+
+
+
+{
+    "use strict";
+
+    const fruits = ["cantaloupe", "orange", "date", "elderberry", "ugli fruit", "pineapple"];
+
+    const customers = [
+        {
+            name: "Fred",
+            age: 58,
+            occupation: "Police Officer",
+            noOfPurchases: 4
+        },
+        {
+            name: "Samantha",
+            age: 54,
+            occupation: "Teacher",
+            noOfPurchases: 18
+        },
+        {
+            name: "Charles",
+            age: 38,
+            occupation: "Librarian",
+            noOfPurchases: 9
+        }
+    ];
+
+
+    // PROBLEM 1 - create an array of the first letters of each fruit
+
+
+
+    // PROBLEM 2 - create array of user objects based on the customers array
+    // of objects (each user object should just have name and age properties)
+
+
+    // PROBLEM 3 - create an array of civil servant customers (teachers and police officers)
+    // containing the same properties as the objects on the customers objects
+
+
+
+    // PROBLEM 4 - determine the average age of customers
+
+
+
+
+
+//            PROBLEM 1 HINT - use .map()
+
+    const firstLetters = fruits.map((fruit) => {
+
+  return fruit.charAt(0);
+
+});
+
+  // console.log(firstLetters);
+
+
+//            PROBLEM 2 HINT - use .map()
+
+
+
+  const custArray = customers.map((customer) => {
+
+    customer = `Name: ${customer.name} Age: ${customer.age}`;
+
+    return customer;
+
+  });
+
+
+  console.log(custArray);
+
+
+
+//            PROBLEM 3 HINT - use .filter()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//            PROBLEM 4 HINT - use .reduce()
+
+
+
+
+
+
+
+
+
+}
 
 
