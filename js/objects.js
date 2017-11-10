@@ -181,7 +181,7 @@
 
 
     // books.forEach(function(book, index) {
-    //         console.log("Book # " + index);
+    //         console.log("Book # " + (index + 1);
     //         console.log("Title: " + book.title);
     //         console.log("Author: " + book.author.firstName + " " + book.author.lastName);
     //         console.log("---")
@@ -204,69 +204,69 @@
 
 
 
-    function createBook(title, authorFirstName, authorLastName) {
-        return {
-            title: title,
-            authorFirstName: authorFirstName,
-            authorLastName: authorLastName,
-        };
-    }
-
-            showBookInfo: function() {
-                return 'Title: ' + this.title + 'Author: ' + this.firstName + " " + this.lastName;
-            }
-
-            console.log(createBook.showBookInfo("The Illustrated Man", "Ray", "Bradbury"));
-
-
-
-
-//     var books = [
-//         {
-//             title: "The Martian Chronicles",
-//             author: {
-//                 firstName: "Ray",
-//                 lastName: "Bradbury"
-//             }
-//         },
-//         {
-//             title: "The Illustrated Man",
-//             author: {
-//                 firstName: "Ray",
-//                 lastName: "Bradbury"
-//             }
-//         },
-//         {
-//             title: "Fahrenheit 451",
-//             author: {
-//                 firstName: "Ray",
-//                 lastName: "Bradbury"
-//             }
-//         },
-//         {
-//             title: "The Golden Apples of the Sun",
-//             author: {
-//                 firstName: "Ray",
-//                 lastName: "Bradbury"
-//             }
-//         },
-//         {
-//             title: "All You Need Is Kill",
-//             author: {
-//                 firstName: "Hiroshi",
-//                 lastName: "Sakurazaka"
-//             }
-//         }
-//
-//
-//     ];
-//
-//      showBookInfo: function() {
-//         return 'Title: ' + this.title + 'Author: ' + this.firstName + " " + this.lastName;
+//     function createBook(title, authorFirstName, authorLastName) {
+//         return {
+//             title: title,
+//             authorFirstName: authorFirstName,
+//             authorLastName: authorLastName,
+//         };
 //     }
 //
+//             showBookInfo: function() {
+//                 return 'Title: ' + this.title + 'Author: ' + this.firstName + " " + this.lastName;
+//             }
 //
-// console.log(showBookInfo(books));
+//             console.log(createBook.showBookInfo("The Illustrated Man", "Ray", "Bradbury"));
+//
+//
+//
+//
+// //     var books = [
+// //         {
+// //             title: "The Martian Chronicles",
+// //             author: {
+// //                 firstName: "Ray",
+// //                 lastName: "Bradbury"
+// //             }
+// //         },
+// //         {
+// //             title: "The Illustrated Man",
+// //             author: {
+// //                 firstName: "Ray",
+// //                 lastName: "Bradbury"
+// //             }
+// //         },
+// //         {
+// //             title: "Fahrenheit 451",
+// //             author: {
+// //                 firstName: "Ray",
+// //                 lastName: "Bradbury"
+// //             }
+// //         },
+// //         {
+// //             title: "The Golden Apples of the Sun",
+// //             author: {
+// //                 firstName: "Ray",
+// //                 lastName: "Bradbury"
+// //             }
+// //         },
+// //         {
+// //             title: "All You Need Is Kill",
+// //             author: {
+// //                 firstName: "Hiroshi",
+// //                 lastName: "Sakurazaka"
+// //             }
+// //         }
+// //
+// //
+// //     ];
+// //
+// //      showBookInfo: function() {
+// //         return 'Title: ' + this.title + 'Author: ' + this.firstName + " " + this.lastName;
+// //     }
+// //
+// //
+// // console.log(showBookInfo(books));
 
 
 

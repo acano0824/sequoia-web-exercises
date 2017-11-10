@@ -1,81 +1,118 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <style type="text/css">
-        #map-canvas {
-            width: 770px;
-            height: 481px;
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon">
+
+    <title>Google Maps Test</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+    <style>
+
+        #map {
+            width: 80vw;
+            height: 80vh;
         }
+
     </style>
+
 </head>
 <body>
-<!-- div to hold map -->
-<div id="map-canvas"></div>
 
-<!-- Load the Google Maps API [DON'T FORGET TO USE A KEY] -->
+<main class="container">
+
+    <h1 class="text-center">Google Maps Test</h1>
+
+    <br>
+
+    <div class="center-block" id="map"></div>
+
+</main>
+
+<!-- jQuery Version 2.2.4 -->
+<script src="http://code.jquery.com/jquery-2.2.4.min.js"></script>
+
+<!-- Bootstrap JS -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<!-- Google Maps -->
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_5EpAVIKBObHJCwdH00sUl2o1IgQ4Ll4"></script>
 
-<!-- Script to show address on map -->
-<script type="text/javascript">
-    (function() {
-        "use strict";
+<!-- Custom JS -->
+<script>
 
-        // Set our map options
-        var mapOptions = {
-            // Set the zoom level
-            zoom: 19,
+    "use strict";
 
-            // This sets the center of the map at our location
-            center: {
-                lat:  25.9098800,
-                lng: -97.471460
-            }
-        };
+    // ============== BUILD MAP
+    var mapOptions = {
+        zoom: 19,
+        center: {
+            lat:  25.9099,
+            lng: -97.4715
+        }
+    };
+
+    var restaurant = {
+        name: "Antojitos Yoly",
+        address: "2055 Southmost Blvd, Brownsville, TX, 78521",
+        info: "The best tacos ever!"
+    };
+
+    function initMap(optionsObject) {
+        return new google.maps.Map(document.getElementById("map"), optionsObject);
+    }
+
+    var map = initMap(mapOptions);
 
 
-        // Render the map
-        var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+    //  ============== GEOCODING
 
-        // Include code from previous example
+//    function getLocation(address) {
+//
+//        var geocoder = new google.maps.Geocoder();
+//
+//        geocoder.geocode({address: address}, function(results, status) {
+//            if (status == google.maps.GeocoderStatus.OK) {
+//                var position = results[0].geometry.location;
+//                addMarkerAndInfoWindow(position, re.name, restaurant.info);
+//            } else {
+//                alert("Geocoding unsuccessful");
+//            }
+//        });
+//
+//    }
+//
+//    getLocation(restaurant.address);
 
-        // Set our address to geocode
-        var address = "2055 Southmost Blvd, Brownsville, TX, 78521";
+    //  ============== ADD MARKER AND INFO WINDOW
 
-        // Init geocoder object
-        var geocoder = new google.maps.Geocoder();
 
-        // Geocode our address
-        geocoder.geocode({ "address": address }, function(results, status) {
+    function addMarkerAndInfoWindow(position) {
 
-            // Check for a successful result
-            if (status == google.maps.GeocoderStatus.OK) {
 
-                // Recenter the map over the address
-                map.setCenter(results[0].geometry.location);
-            } else {
+        google.maps.event.addListener(map, "click", function(e) {
+            var position = {lat: e.latLng.lat(), lng: e.latLng.lng()};
+            var marker = new google.maps.Marker({
+                position: position,
+                map: map,
+                draggable: true,
+                animation: google.maps.Animation.DROP
+            });
 
-                // Show an error message with the status if our request fails
-                alert("Geocoding was not successful - STATUS: " + status);
-            }
         });
 
-        // Create lat and long for our marker position
-        var yolys = { lat: 25.9098800, lng: -97.471460};
 
-// Add the marker to our existing map
-        var marker = new google.maps.Marker({
-            position: yolys,
-            map: map
-        });
+        }
 
-        // Create a new infoWindow object with content
-        var infowindow = new google.maps.InfoWindow({
-            content: "It "
-        });
 
-// Open the window using our map and marker
-        infowindow.open(map, marker);
 
-    })();
+
 </script>
+
 </body>
+</html>
