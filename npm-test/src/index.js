@@ -1,7 +1,3 @@
-const $ = require('jquery');
+const goodMorning = require('./say-hello.js');
 
-const sayHello = () => {
-    console.log('hello world!')};
-
-    console.log($);
-    sayHello();
+    goodMorning();
